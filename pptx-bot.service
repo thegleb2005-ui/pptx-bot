@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram PPTX Bot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/pptx-bot
+ExecStart=/home/ubuntu/pptx-bot/venv/bin/python3 /home/ubuntu/pptx-bot/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
